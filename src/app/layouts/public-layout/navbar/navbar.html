@@ -1,0 +1,36 @@
+<nav
+  class="flex items-center justify-between border-b border-border bg-surface px-6 py-4 text-foreground"
+>
+  <!-- Logo -->
+  <a href="/" class="text-2xl font-bold text-primary"> geidea. </a>
+
+  <!-- Actions -->
+  <div class="flex items-center gap-3">
+    <!-- Language -->
+
+    <button
+      type="button"
+      (click)="languageService.toggleLanguage()"
+      class="rounded-lg border border-border px-4 py-2 text-sm"
+    >
+      {{ languageService.currentLang() === 'en' ? 'العربية' : 'English' }}
+    </button>
+
+    <!-- Theme -->
+    <button
+      type="button"
+      (click)="themeService.toggleTheme()"
+      class="rounded-lg border border-border px-4 py-2 text-sm"
+    >
+      {{ themeService.theme() === 'light' ? '🌙 Dark' : '☀️ Light' }}
+    </button>
+
+    <!-- Login -->
+    <a
+      class="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary-hover"
+      routerLink="/login"
+    >
+      {{ 'navbar.login' | transloco }}
+    </a>
+  </div>
+</nav>

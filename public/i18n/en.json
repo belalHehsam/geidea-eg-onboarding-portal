@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "login": "Log in",
+    "language": "العربية"
+  },
+  "home": {
+    "title": "What would you like to do?",
+    "description": "Choose the service that fits your business."
+  }
+}

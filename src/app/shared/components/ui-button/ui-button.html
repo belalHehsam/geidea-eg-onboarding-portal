@@ -1,0 +1,14 @@
+<button
+  [type]="type()"
+  [disabled]="disabled()"
+  [class.w-full]="fullWidth()"
+  [class]="
+    variant() === 'primary'
+      ? 'bg-primary cursor-pointer text-primary-foreground hover:bg-primary-hover'
+      : 'border cursor-pointer border-border bg-surface text-foreground hover:bg-surface-soft'
+  "
+  class="inline-flex cursor-pointer min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+  (click)="onButtonClicked()"
+>
+  <ng-content />
+</button>

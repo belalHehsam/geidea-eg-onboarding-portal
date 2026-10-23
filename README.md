@@ -4,7 +4,7 @@ An Angular frontend prototype for the Geidea merchant onboarding experience. Use
 
 > **Note:** This repository's environment configuration, backend integration, and supported Angular/Node versions must be confirmed with the project team. Do not use real customer data in local mocks.
 
-## Getting Started
+## Geting Started
 
 **Prerequisites:** Node.js and npm (use versions compatible with this project's Angular version).
 
