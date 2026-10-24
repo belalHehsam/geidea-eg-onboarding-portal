@@ -1,17 +1,16 @@
-import { Component, inject } from '@angular/core';
-import { UiButton } from '../../shared/components/ui-button/ui-button';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { LoginForm } from '../../features/auth/components/login-form/login-form';
+import { RouterLink } from '@angular/router';
+import { LucideAngularModule, ArrowLeft, ArrowRight, Sparkles } from 'lucide-angular';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-login',
-  imports: [UiButton],
+  imports: [LoginForm, RouterLink, LucideAngularModule, TranslocoPipe],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
 export class Login {
-  private readonly router = inject(Router);
-
-  goHome() {
-    this.router.navigate(['./']);
-  }
+  readonly ArrowLeft = ArrowLeft;
+  readonly Sparkles = Sparkles;
 }

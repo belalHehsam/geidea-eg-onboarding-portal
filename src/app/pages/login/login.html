@@ -1,7 +1,69 @@
-<div class="mx-auto max-w-md p-8">
-  <app-ui-button [fullWidth]="true"> Log in </app-ui-button>
+<main class="relative min-h-screen overflow-hidden bg-background">
+  <div
+    class="relative mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4 py-12 sm:px-6"
+  >
+    <!-- Decorative circles -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-s-6 top-16 hidden size-36 rounded-full bg-orange-500 lg:block"
+    ></div>
 
-  <div class="mt-4">
-    <app-ui-button variant="outline" (buttonClicked)="goHome()"> Back </app-ui-button>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-s-28 top-1/2 hidden size-20 rounded-full bg-orange-200 lg:block"
+    ></div>
+
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute bottom-12 inset-s-48 hidden size-5 rounded-full bg-orange-500 lg:block"
+    ></div>
+
+    <!-- Login card -->
+    <section
+      aria-labelledby="login-title"
+      class="login-card relative z-10 w-full max-w-md border border-border bg-surface px-7 py-9 shadow-xl sm:px-10 sm:py-11"
+    >
+      <a
+        routerLink="/"
+        class="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+      >
+        <lucide-icon [img]="ArrowLeft" [size]="16" class="rtl:rotate-180" aria-hidden="true" />
+        {{ 'auth.backToProducts' | transloco }}
+      </a>
+
+      <p class="mb-2 text-xs font-bold tracking-widest text-primary">
+        {{ 'auth.geideaId' | transloco }}
+      </p>
+
+      <h1 id="login-title" class="mb-8 text-3xl font-bold text-foreground sm:text-4xl">
+        {{ 'auth.loginTitle' | transloco }}
+      </h1>
+
+      <app-login-form />
+
+      <p class="mt-7 text-center text-sm text-muted-foreground">
+        {{ 'auth.newToGeidea' | transloco }}
+
+        <a
+          routerLink="/register"
+          class="ms-1 font-semibold text-primary transition-colors hover:text-primary-hover"
+        >
+          {{ 'auth.createAccount' | transloco }}
+        </a>
+      </p>
+    </section>
+
+    <!-- Marketing section -->
+    <aside class="absolute end-6 top-1/2 hidden w-48 -translate-y-1/2 xl:block">
+      <lucide-icon [img]="Sparkles" [size]="28" class="text-primary" aria-hidden="true" />
+
+      <h2 class="mt-4 text-2xl font-bold leading-tight text-foreground">
+        {{ 'auth.marketingTitle' | transloco }}
+      </h2>
+
+      <p class="mt-5 text-sm text-muted-foreground">
+        {{ 'auth.marketingSubtitle' | transloco }}
+      </p>
+    </aside>
   </div>
-</div>
+</main>

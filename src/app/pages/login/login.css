@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.login-card {
+  border-radius: 4rem 1.5rem 4rem 1.5rem;
+}
+
+:host-context([dir='rtl']) .login-card {
+  border-radius: 1.5rem 4rem 1.5rem 4rem;
+}

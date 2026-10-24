@@ -1,0 +1,44 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-5">
+  <app-ui-input
+    [label]="'auth.identifier' | transloco"
+    [placeholder]="'auth.identifierPlaceholder' | transloco"
+    type="text"
+    autocomplete="username"
+    [icon]="Mail"
+    [error]="identifierError"
+    formControlName="Identifier"
+    [showPasswordLabel]="'auth.showPassword' | transloco"
+    [hidePasswordLabel]="'auth.hidePassword' | transloco"
+  />
+
+  <div class="flex flex-col gap-3">
+    <app-ui-input
+      [label]="'auth.password' | transloco"
+      [placeholder]="'auth.passwordPlaceholder' | transloco"
+      type="password"
+      autocomplete="current-password"
+      [icon]="LockKeyhole"
+      [showPasswordToggle]="true"
+      [error]="passwordError"
+      formControlName="Password"
+      [showPasswordLabel]="'auth.showPassword' | transloco"
+      [hidePasswordLabel]="'auth.hidePassword' | transloco"
+    />
+
+    <a
+      routerLink="/forgot-password"
+      class="self-end text-xs font-medium text-primary transition-colors hover:text-primary-hover"
+    >
+      {{ 'auth.forgotPassword' | transloco }}
+    </a>
+  </div>
+
+  <app-ui-button type="submit" [fullWidth]="true" [disabled]="isLoading()">
+    @if (isLoading()) {
+      <app-ui-spinner size="sm" />
+      {{ 'auth.loggingIn' | transloco }}
+    } @else {
+      {{ 'auth.login' | transloco }}
+    }
+  </app-ui-button>
+</form>

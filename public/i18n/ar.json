@@ -6,5 +6,62 @@
   "home": {
     "title": "إيه الخدمة المناسبة لنشاطك؟",
     "description": "اختار الخدمة اللي تناسب نشاطك التجاري."
+  },
+
+  "auth": {
+    "backToProducts": "العودة إلى المنتجات",
+    "geideaId": "GEIDEA ID",
+    "loginTitle": "تسجيل الدخول",
+    "identifier": "البريد الإلكتروني أو رقم الموبايل",
+    "identifierPlaceholder": "name@company.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "login": "تسجيل الدخول",
+    "loggingIn": "جارٍ تسجيل الدخول...",
+    "newToGeidea": "جديد في جيديا؟",
+    "createAccount": "إنشاء حساب",
+    "marketingTitle": "أسرع طريقة لاستلام مدفوعات نشاطك التجاري.",
+    "marketingSubtitle": "تجربة تجار جيديا",
+    "showPassword": "إظهار كلمة المرور",
+    "hidePassword": "إخفاء كلمة المرور",
+    "validation": {
+      "identifierRequired": "البريد الإلكتروني أو رقم الموبايل مطلوب.",
+      "identifierInvalid": "أدخل بريدًا إلكترونيًا أو رقم موبايل صحيحًا.",
+      "passwordRequired": "كلمة المرور مطلوبة.",
+      "passwordMinLength": "كلمة المرور يجب ألا تقل عن 8 أحرف."
+    }
+  },
+
+  "register": {
+    "backToLogin": "العودة لتسجيل الدخول",
+    "eyebrow": "انضم إلى جيديا",
+    "title": "أنشئ حسابك",
+    "subtitle": "ابدأ رحلتك التجارية مع جيديا.",
+    "fullName": "الاسم بالكامل",
+    "fullNamePlaceholder": "أدخل اسمك بالكامل",
+    "businessName": "اسم النشاط التجاري",
+    "businessNamePlaceholder": "أدخل اسم نشاطك التجاري",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "name@company.com",
+    "mobile": "رقم الموبايل",
+    "mobilePlaceholder": "01012345678",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أنشئ كلمة مرور",
+    "submit": "إنشاء الحساب",
+    "creating": "جارٍ إنشاء الحساب...",
+    "demoNote": "نسخة تجريبية فقط: لن يتم إرسال رسالة SMS. التسجيل غير متصل بالخادم بعد.",
+    "marketingTitle": "خلينا ننمّي نشاطك التجاري مع بعض.",
+    "validation": {
+      "fullNameRequired": "الاسم بالكامل مطلوب.",
+      "businessNameRequired": "اسم النشاط التجاري مطلوب.",
+      "emailRequired": "البريد الإلكتروني مطلوب.",
+      "mobileRequired": "رقم الموبايل مطلوب.",
+      "passwordRequired": "كلمة المرور مطلوبة.",
+      "emailInvalid": "أدخل بريدًا إلكترونيًا صحيحًا.",
+      "mobileInvalid": "أدخل رقم موبايل مصريًا صحيحًا.",
+      "minLength": "أدخل حرفين على الأقل.",
+      "passwordMinLength": "كلمة المرور يجب ألا تقل عن 8 أحرف."
+    }
   }
 }

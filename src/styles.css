@@ -34,6 +34,16 @@
   --foreground: #141414;
   --muted-foreground: #7a7a7a;
   --border: #dddddd;
+
+  /* Semantic status colors - Light */
+  --error: #dc2626;
+  --error-soft: #fef2f2;
+
+  --success: #16a34a;
+  --success-soft: #f0fdf4;
+
+  --warning: #d97706;
+  --warning-soft: #fffbeb;
 }
 
 :root.dark {
@@ -61,6 +71,17 @@
   --foreground: #ffffff;
   --muted-foreground: #bdbdbd;
   --border: #7a7a7a;
+
+  /* Semantic status colors - Light */
+  /* Semantic status colors - Dark */
+  --error: #f87171;
+  --error-soft: #450a0a;
+
+  --success: #4ade80;
+  --success-soft: #052e16;
+
+  --warning: #fbbf24;
+  --warning-soft: #451a03;
 }
 
 /* ---------------------------------------------------------------------------
@@ -93,6 +114,15 @@
   --color-border: var(--border);
 
   --color-ring: var(--primary);
+
+  --color-error: var(--error);
+  --color-error-soft: var(--error-soft);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
 }
 
 @layer base {

@@ -6,5 +6,62 @@
   "home": {
     "title": "What would you like to do?",
     "description": "Choose the service that fits your business."
+  },
+  "auth": {
+    "backToProducts": "Back to products",
+    "geideaId": "GEIDEA ID",
+    "loginTitle": "Log in",
+    "identifier": "Email or mobile number",
+    "identifierPlaceholder": "name@company.com",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password?",
+    "login": "Log in",
+    "loggingIn": "Logging in...",
+    "newToGeidea": "New to Geidea?",
+    "createAccount": "Create an account",
+    "marketingTitle": "The fastest way to get your business paid.",
+    "marketingSubtitle": "Geidea Merchant Experience",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+
+    "validation": {
+      "identifierRequired": "Email or mobile number is required.",
+      "identifierInvalid": "Enter a valid email or mobile number.",
+      "passwordRequired": "Password is required.",
+      "passwordMinLength": "Password must be at least 8 characters."
+    }
+  },
+
+  "register": {
+    "backToLogin": "Back to login",
+    "eyebrow": "JOIN GEIDEA",
+    "title": "Create your account",
+    "subtitle": "Start your business journey with Geidea.",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Enter your full name",
+    "businessName": "Business name",
+    "businessNamePlaceholder": "Enter your business name",
+    "email": "Email address",
+    "emailPlaceholder": "name@company.com",
+    "mobile": "Mobile number",
+    "mobilePlaceholder": "01012345678",
+    "password": "Password",
+    "passwordPlaceholder": "Create a password",
+    "submit": "Create your account",
+    "creating": "Creating account...",
+    "demoNote": "Demo only: No SMS will be sent. Registration is not connected yet.",
+    "marketingTitle": "Let's grow your business together.",
+    "validation": {
+      "fullNameRequired": "Full name is required.",
+      "businessNameRequired": "Business name is required.",
+      "emailRequired": "Email is required.",
+      "mobileRequired": "Mobile number is required.",
+      "passwordRequired": "Password is required.",
+      "emailInvalid": "Enter a valid email address.",
+      "mobileInvalid": "Enter a valid Egyptian mobile number.",
+      "minLength": "Please enter at least 2 characters.",
+      "passwordMinLength": "Password must be at least 8 characters."
+    }
   }
 }
