@@ -1,0 +1,61 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+  <app-ui-input
+    [label]="'auth.register.fullName' | transloco"
+    [placeholder]="'auth.register.fullNamePlaceholder' | transloco"
+    [icon]="UserRound"
+    [error]="errorFor('fullName') ? (errorFor('fullName')! | transloco) : null"
+    autocomplete="name"
+    formControlName="fullName"
+  />
+
+  <app-ui-input
+    [label]="'auth.register.businessName' | transloco"
+    [placeholder]="'auth.register.businessNamePlaceholder' | transloco"
+    [icon]="Building2"
+    [error]="errorFor('businessName') ? (errorFor('businessName')! | transloco) : null"
+    autocomplete="organization"
+    formControlName="businessName"
+  />
+
+  <app-ui-input
+    [label]="'auth.register.email' | transloco"
+    [placeholder]="'auth.register.emailPlaceholder' | transloco"
+    [icon]="Mail"
+    [error]="errorFor('email') ? (errorFor('email')! | transloco) : null"
+    type="email"
+    autocomplete="email"
+    formControlName="email"
+  />
+
+  <app-ui-input
+    [label]="'auth.register.mobile' | transloco"
+    [placeholder]="'auth.register.mobilePlaceholder' | transloco"
+    [icon]="Phone"
+    [error]="errorFor('mobile') ? (errorFor('mobile')! | transloco) : null"
+    type="tel"
+    autocomplete="tel"
+    formControlName="mobile"
+  />
+
+  <app-ui-input
+    [label]="'auth.register.password' | transloco"
+    [placeholder]="'auth.register.passwordPlaceholder' | transloco"
+    [showPasswordLabel]="'auth.showPassword' | transloco"
+    [hidePasswordLabel]="'auth.hidePassword' | transloco"
+    [icon]="LockKeyhole"
+    [error]="errorFor('password') ? (errorFor('password')! | transloco) : null"
+    type="password"
+    autocomplete="new-password"
+    [showPasswordToggle]="true"
+    formControlName="password"
+  />
+
+  <app-ui-button type="submit" [fullWidth]="true" [disabled]="isLoading()">
+    @if (isLoading()) {
+      <app-ui-spinner size="sm" />
+      {{ 'auth.register.creating' | transloco }}
+    } @else {
+      {{ 'auth.register.submit' | transloco }}
+    }
+  </app-ui-button>
+</form>

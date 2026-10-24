@@ -1,1 +1,53 @@
-<p>register works!</p>
+<main class="min-h-screen bg-background">
+  <div
+    class="mx-auto grid min-h-screen w-full max-w-5xl grid-cols-1 items-center gap-12 px-4 py-6 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-10"
+  >
+    <!-- Register card -->
+    <section
+      aria-labelledby="register-title"
+      class="w-full max-w-md justify-self-center rounded-3xl border border-border bg-surface px-6 py-8 shadow-lg sm:px-9 sm:py-10"
+    >
+      <a
+        routerLink="/login"
+        class="mb-5 inline-flex items-center gap-2 text-xs font-semibold text-primary hover:text-primary-hover"
+      >
+        <lucide-icon [img]="ArrowLeft" [size]="15" class="rtl:rotate-180" aria-hidden="true" />
+        {{ 'auth.register.backToLogin' | transloco }}
+      </a>
+
+      <p class="mb-2 text-xs font-bold uppercase tracking-widest text-primary">
+        {{ 'auth.register.eyebrow' | transloco }}
+      </p>
+
+      <h1 id="register-title" class="text-3xl font-bold tracking-tight text-foreground">
+        {{ 'auth.register.title' | transloco }}
+      </h1>
+
+      <p class="mb-7 mt-3 text-sm text-muted-foreground">
+        {{ 'auth.register.subtitle' | transloco }}
+      </p>
+
+      <app-register-form />
+    </section>
+
+    <!-- Marketing illustration: hidden completely on mobile -->
+    <aside
+      class="hidden flex-col justify-center gap-8 lg:flex"
+      aria-labelledby="register-marketing-title"
+    >
+      <div
+        class="relative flex h-64 items-center justify-center overflow-hidden rounded-3xl"
+        aria-hidden="true"
+      >
+        <img src="h-1.avif" alt="" />
+      </div>
+
+      <h2
+        id="register-marketing-title"
+        class="max-w-sm text-4xl font-bold leading-tight tracking-tight text-foreground xl:text-5xl"
+      >
+        {{ 'auth.register.marketingTitle' | transloco }}
+      </h2>
+    </aside>
+  </div>
+</main>
