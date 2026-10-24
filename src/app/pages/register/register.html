@@ -4,6 +4,7 @@
   >
     <!-- Register card -->
     <section
+      appReveal
       aria-labelledby="register-title"
       class="register-card w-full max-w-md justify-self-center rounded-3xl border border-border bg-surface px-6 py-8 shadow-lg sm:px-9 sm:py-10"
     >
@@ -32,6 +33,8 @@
 
     <!-- image : hidden completely on mobile -->
     <aside
+      appReveal
+      [revealDelay]="80"
       class="hidden flex-col justify-center gap-8 lg:flex"
       aria-labelledby="register-marketing-title"
     >

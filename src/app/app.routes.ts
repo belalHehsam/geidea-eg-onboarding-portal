@@ -10,6 +10,12 @@ export const routes: Routes = [
         title: 'Geidea | Home',
         loadComponent: () => import('./pages/home/home/home').then((m) => m.Home),
       },
+      {
+        path: 'products/devices',
+        title: 'Geidea | Devices',
+        loadComponent: () =>
+          import('./pages/device-selection/device-selection').then((m) => m.DeviceSelection),
+      },
     ],
   },
 

@@ -86,5 +86,20 @@
         "passwordMinLength": "كلمة المرور يجب ألا تقل عن 8 أحرف."
       }
     }
+  },
+
+  "products": {
+    "back": "رجوع",
+    "eyebrow": "حلول الدفع",
+    "title": "اختار جهازك",
+    "subtitle": "اختار الحل المناسب لنشاطك التجاري.",
+    "moreDetails": " التفاصيل",
+    "select": "اختيار",
+    "selectedFeedback": "المنتج المختار",
+    "detailsFeedback": "تم طلب تفاصيل المنتج",
+
+    "closeDetails": "إغلاق تفاصيل المنتج",
+    "cardSchemes": "شبكات الدفع",
+    "specifications": "المواصفات"
   }
 }

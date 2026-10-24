@@ -85,5 +85,20 @@
         "passwordMinLength": "Password must be at least 8 characters."
       }
     }
+  },
+
+  "products": {
+    "back": "Back",
+    "eyebrow": "PAYMENT SOLUTIONS",
+    "title": "Select your device",
+    "subtitle": "Find the right solution for your business.",
+    "moreDetails": "details",
+    "select": "Select",
+    "selectedFeedback": "Selected product",
+    "detailsFeedback": "Product details requested",
+
+    "closeDetails": "Close product details",
+    "cardSchemes": "Card schemes",
+    "specifications": "Specifications"
   }
 }

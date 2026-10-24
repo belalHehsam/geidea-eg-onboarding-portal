@@ -4,10 +4,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { LucideAngularModule, Menu, X, Globe, Sun, Moon } from 'lucide-angular';
 import { ThemeService } from '../../../core/services/theme';
+import { Reveal } from '../../../shared/directives/reveal';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, TranslocoPipe, LucideAngularModule],
+  imports: [RouterLink, RouterLinkActive, TranslocoPipe, LucideAngularModule, Reveal],
   templateUrl: './navbar.html',
 })
 export class Navbar {
