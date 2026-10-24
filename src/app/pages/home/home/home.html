@@ -1,9 +1,140 @@
-<section class="mx-auto max-w-6xl px-6 py-12">
-  <h1 class="text-3xl font-bold text-foreground">
-    {{ 'home.title' | transloco }}
-  </h1>
+<main class="bg-background">
+  <!-- HERO SECTION -->
+  <section
+    class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-16"
+  >
+    <!-- Left: Hero content -->
+    <div class="max-w-xl">
+      <p class="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+        {{ 'home.eyebrow' | transloco }}
+      </p>
 
-  <p class="mt-4 text-muted-foreground">
-    {{ 'home.description' | transloco }}
-  </p>
-</section>
+      <h1
+        class="max-w-lg text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+      >
+        {{ 'home.title' | transloco }}
+      </h1>
+
+      <p class="mt-6 max-w-md text-sm leading-7 text-muted-foreground sm:text-base">
+        {{ 'home.description' | transloco }}
+      </p>
+
+      <!-- Smooth scroll to services -->
+      <a
+        href="#services"
+        class="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
+      >
+        {{ 'home.explore' | transloco }}
+
+        <lucide-icon [img]="ArrowDown" [size]="16" aria-hidden="true" />
+      </a>
+    </div>
+
+    <!-- Right: Hero image -->
+    <div class="w-full">
+      <img
+        src="h-18.png"
+        [alt]="'home.heroImageAlt' | transloco"
+        class="block h-auto w-full rounded-3xl object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section
+    id="services"
+    class="scroll-mt-24 mx-auto w-full max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24"
+  >
+    <!-- Section heading -->
+    <div class="mb-7">
+      <p class="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+        {{ 'home.solutions' | transloco }}
+      </p>
+
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+        {{ 'home.chooseService' | transloco }}
+      </h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+      <!-- CARD 1: ACCEPT PAYMENTS -->
+      <a
+        routerLink="/products/devices"
+        class="group grid min-h-64 grid-cols-1 items-center gap-5 overflow-hidden rounded-3xl border border-border bg-surface p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 ease-out hover:border-primary hover:shadow-xl focus-visible:border-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transform-none sm:grid-cols-[42%_1fr] sm:gap-3"
+      >
+        <div class="flex h-44 items-center justify-center sm:h-full">
+          <img
+            src="./assets/h-4.avif"
+            [alt]="'home.cardPaymentsImageAlt' | transloco"
+            class="max-h-52 w-full object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex flex-col items-start ps-1">
+          <p class="mb-3 text-xs font-bold uppercase tracking-widest text-primary">
+            {{ 'home.inStoreLabel' | transloco }}
+          </p>
+
+          <h3 class="text-2xl font-bold text-foreground">
+            {{ 'home.cardPayments' | transloco }}
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-muted-foreground">
+            {{ 'home.cardPaymentsDescription' | transloco }}
+          </p>
+
+          <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+            {{ 'home.exploreService' | transloco }}
+            <lucide-icon
+              [img]="ArrowRight"
+              [size]="16"
+              class="transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 motion-reduce:transform-none"
+              aria-hidden="true"
+            />
+          </span>
+        </div>
+      </a>
+
+      <!-- CARD 2: GEIDEA PAY -->
+      <a
+        routerLink="/products/devices"
+        class="group grid min-h-64 grid-cols-1 items-center gap-5 overflow-hidden rounded-3xl border border-border bg-surface p-6 shadow-sm transition-[transform,border-color,box-shadow] duration-300 ease-out hover:border-primary hover:shadow-xl focus-visible:border-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transform-none sm:grid-cols-[42%_1fr] sm:gap-3"
+      >
+        <div class="flex h-44 items-center justify-center sm:h-full">
+          <img
+            src="./assets/images.jpeg"
+            [alt]="'home.cardPaymentsImageAlt' | transloco"
+            class="max-h-52 w-full object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex flex-col items-start ps-1">
+          <p class="mb-3 text-xs font-bold uppercase tracking-widest text-primary">
+            {{ 'home.inStoreLabel' | transloco }}
+          </p>
+
+          <h3 class="text-2xl font-bold text-foreground">
+            {{ 'home.cardPayments' | transloco }}
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-muted-foreground">
+            {{ 'home.cardPaymentsDescription' | transloco }}
+          </p>
+
+          <span class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+            {{ 'home.exploreService' | transloco }}
+            <lucide-icon
+              [img]="ArrowRight"
+              [size]="16"
+              class="transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 motion-reduce:transform-none"
+              aria-hidden="true"
+            />
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+</main>

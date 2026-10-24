@@ -1,11 +1,34 @@
 {
-  "navbar": {
+  "nav": {
+    "mainNavigation": "القائمة الرئيسية",
+    "home": "الرئيسية",
+    "products": "المنتجات",
     "login": "تسجيل الدخول",
-    "language": "English"
+    "getStarted": "ابدأ الآن",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "changeLanguage": "تغيير اللغة",
+    "changeTheme": "تغيير المظهر",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
   },
   "home": {
     "title": "إيه الخدمة المناسبة لنشاطك؟",
-    "description": "اختار الخدمة اللي تناسب نشاطك التجاري."
+    "description": "اختار الخدمة اللي تناسب نشاطك التجاري.",
+    "heroImageAlt": "جهاز دفع جيديا وبطاقة دفع",
+    "cardPaymentsImageAlt": "جهاز دفع جيديا",
+    "geideaPayImageAlt": "تصميم لخدمة جيديا باي",
+    "inStoreLabel": "داخل المتجر والموبايل",
+    "digitalCommerceLabel": "التجارة الرقمية",
+    "eyebrow": "شريك واحد، لكل مدفوعاتك",
+    "explore": "اكتشف الخدمات",
+    "solutions": "حلولنا",
+    "chooseService": "اختار خدمتك",
+    "cardPayments": "قبول المدفوعات",
+    "cardPaymentsDescription": "اقبل مدفوعات البطاقات واللاتلامسية في متجرك أو أثناء التنقل أو من موبايلك.",
+    "geideaPay": "جيديا باي",
+    "geideaPayDescription": "أنشئ روابط دفع وفواتير وتجربة دفع إلكتروني سهلة.",
+    "exploreService": "اكتشف الخدمة"
   },
 
   "auth": {
@@ -44,7 +67,7 @@
       "email": "البريد الإلكتروني",
       "emailPlaceholder": "name@company.com",
       "mobile": "رقم الموبايل",
-      "mobilePlaceholder": "01012345678",
+      "mobilePlaceholder": "٠١٠١٢٣٤٥٦٧٨",
       "password": "كلمة المرور",
       "passwordPlaceholder": "أنشئ كلمة مرور",
       "submit": "إنشاء الحساب",

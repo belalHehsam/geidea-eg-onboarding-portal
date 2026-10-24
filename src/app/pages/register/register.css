@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.register-card {
+  border-radius: 4rem 1.5rem 4rem 1.5rem;
+}
+
+:host-context([dir='rtl']) .register-card {
+  border-radius: 1.5rem 4rem 1.5rem 4rem;
+}

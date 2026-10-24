@@ -1,11 +1,34 @@
 {
-  "navbar": {
+  "nav": {
+    "mainNavigation": "Main navigation",
+    "home": "Home",
+    "products": "Products",
     "login": "Log in",
-    "language": "العربية"
+    "getStarted": "Get started",
+    "language": "Language",
+    "theme": "Theme",
+    "changeLanguage": "Change language",
+    "changeTheme": "Change theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "home": {
     "title": "What would you like to do?",
-    "description": "Choose the service that fits your business."
+    "description": "Choose the service that fits your business.",
+    "heroImageAlt": "Geidea payment terminal and payment card",
+    "cardPaymentsImageAlt": "Geidea payment terminal",
+    "geideaPayImageAlt": "Geidea Pay digital payment illustration",
+    "inStoreLabel": "IN-STORE & MOBILE",
+    "digitalCommerceLabel": "DIGITAL COMMERCE",
+    "eyebrow": "ONE PARTNER. EVERY PAYMENT.",
+    "explore": "Explore services",
+    "solutions": "OUR SOLUTIONS",
+    "chooseService": "Choose your service",
+    "cardPayments": "Accept Payments",
+    "cardPaymentsDescription": "Accept card and contactless payments in-store, on the go, or from your phone.",
+    "geideaPay": "Geidea Pay",
+    "geideaPayDescription": "Create payment links, invoices, and seamless online checkout experiences.",
+    "exploreService": "Explore this service"
   },
   "auth": {
     "backToProducts": "Back to products",

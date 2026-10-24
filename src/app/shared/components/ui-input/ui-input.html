@@ -5,18 +5,19 @@
     </label>
   }
 
+  <!-- Input container -->
   <div class="relative">
+    <!-- Leading icon -->
     @if (icon(); as leadingIcon) {
-      <!-- leadingIcon : give me the real value instead write the icon() again  -->
-      <lucide-icon
-        [img]="leadingIcon"
-        [size]="18"
+      <span
+        class="pointer-events-none absolute inset-y-0 start-3 flex items-center justify-center text-muted-foreground"
         aria-hidden="true"
-        class="pointer-events-none absolute inset-s-2 top-1/2 -translate-y-1/2 text-muted-foreground"
-      />
+      >
+        <lucide-icon [img]="leadingIcon" [size]="18" />
+      </span>
     }
 
-    <!-- [class.ps-12] : / if we have icon we increase the padding -->
+    <!-- Native input -->
     <input
       [id]="inputId"
       [type]="type() === 'password' && passwordVisible() ? 'text' : type()"
@@ -28,17 +29,14 @@
       [attr.aria-describedby]="error() ? errorId : null"
       (input)="onInput($event)"
       (blur)="onBlur()"
-      [class.ps-10]="icon()"
+      [class.ps-10]="!!icon()"
       [class.pe-10]="type() === 'password' && showPasswordToggle()"
       [class.border-error]="!!error()"
       [class.border-border]="!error()"
-      [class]="
-        error()
-          ? 'border-error focus:border-error focus:ring-error/20 w-full rounded-lg border bg-surface py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground  disabled:cursor-not-allowed disabled:opacity-50'
-          : 'border-border focus:border-primary focus:ring-primary/20 w-full rounded-lg border bg-surface py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground  disabled:cursor-not-allowed disabled:opacity-50'
-      "
+      class="block w-full rounded-lg border bg-surface px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
     />
 
+    <!-- Password visibility toggle -->
     @if (type() === 'password' && showPasswordToggle()) {
       <button
         type="button"
@@ -46,17 +44,17 @@
         (click)="togglePasswordVisibility()"
         [attr.aria-label]="passwordVisible() ? hidePasswordLabel() : showPasswordLabel()"
         [attr.aria-pressed]="passwordVisible()"
-        class="absolute inset-e-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-primary disabled:cursor-not-allowed"
+        class="absolute inset-y-0 end-3 flex items-center justify-center text-muted-foreground transition-colors hover:text-primary disabled:cursor-not-allowed"
       >
         <lucide-icon [img]="passwordVisible() ? EyeOff : Eye" [size]="18" aria-hidden="true" />
       </button>
     }
-
-    <!-- Validation error -->
-    @if (error()) {
-      <p [id]="errorId" role="alert" class="text-xs text-error">
-        {{ error() }}
-      </p>
-    }
   </div>
+
+  <!-- Error message -->
+  @if (error()) {
+    <p [id]="errorId" role="alert" class="text-xs text-error">
+      {{ error() }}
+    </p>
+  }
 </div>

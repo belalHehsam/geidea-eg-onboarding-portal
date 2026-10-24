@@ -1,36 +1,154 @@
-<nav
-  class="flex items-center justify-between border-b border-border bg-surface px-6 py-4 text-foreground"
+<header
+  class="fixed inset-x-0 top-0 z-50 h-(--navbar-height) border-b border-border bg-surface/95 backdrop-blur-md"
 >
-  <!-- Logo -->
-  <a href="/" class="text-2xl font-bold text-primary"> geidea. </a>
-
-  <!-- Actions -->
-  <div class="flex items-center gap-3">
-    <!-- Language -->
-
-    <button
-      type="button"
-      (click)="languageService.toggleLanguage()"
-      class="rounded-lg border border-border px-4 py-2 text-sm"
-    >
-      {{ languageService.currentLang() === 'en' ? 'العربية' : 'English' }}
-    </button>
-
-    <!-- Theme -->
-    <button
-      type="button"
-      (click)="themeService.toggleTheme()"
-      class="rounded-lg border border-border px-4 py-2 text-sm"
-    >
-      {{ themeService.theme() === 'light' ? '🌙 Dark' : '☀️ Light' }}
-    </button>
-
-    <!-- Login -->
+  <nav
+    class="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8"
+    [attr.aria-label]="'nav.mainNavigation' | transloco"
+  >
+    <!-- Logo -->
     <a
-      class="rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary-hover"
-      routerLink="/login"
+      routerLink="/"
+      (click)="closeMenu()"
+      class="inline-flex shrink-0 items-center gap-2 text-xl font-extrabold tracking-tight text-foreground"
     >
-      {{ 'navbar.login' | transloco }}
+      <span
+        class="flex size-8 items-center justify-center rounded-lg bg-primary text-xl font-bold text-primary-foreground"
+        aria-hidden="true"
+      >
+        G
+      </span>
+      <img src="geidea_logo.svg" alt="" srcset="" />
     </a>
-  </div>
-</nav>
+
+    <!-- Desktop navigation -->
+    <div class="hidden items-center gap-7 md:flex">
+      <a
+        routerLink="/"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-primary"
+        class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+      >
+        {{ 'nav.home' | transloco }}
+      </a>
+
+      <a
+        routerLink="/products"
+        routerLinkActive="text-primary"
+        class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+      >
+        {{ 'nav.products' | transloco }}
+      </a>
+    </div>
+
+    <!-- Desktop actions -->
+    <div class="hidden items-center gap-2 md:flex">
+      <button
+        type="button"
+        (click)="toggleLanguage()"
+        [attr.aria-label]="'nav.changeLanguage' | transloco"
+        class="cursor-pointer inline-flex size-10 items-center justify-center rounded-full text-foreground transition-colors hover:bg-background"
+      >
+        <lucide-icon [img]="Globe" [size]="19" aria-hidden="true" />
+      </button>
+
+      <button
+        type="button"
+        (click)="toggleTheme()"
+        [attr.aria-label]="'nav.changeTheme' | transloco"
+        class="cursor-pointer inline-flex size-10 items-center justify-center rounded-full text-foreground transition-colors hover:bg-background"
+      >
+        <lucide-icon [img]="themeIcon() === 'sun' ? Moon : Sun" [size]="19" aria-hidden="true" />
+      </button>
+
+      <a
+        routerLink="/login"
+        class="inline-flex min-h-10 items-center justify-center rounded-full border border-border bg-surface px-5 text-sm font-semibold text-foreground transition-colors hover:bg-background"
+      >
+        {{ 'nav.login' | transloco }}
+      </a>
+
+      <a
+        routerLink="/register"
+        class="inline-flex min-h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
+      >
+        {{ 'nav.getStarted' | transloco }}
+      </a>
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <button
+      type="button"
+      class="inline-flex size-10 items-center justify-center rounded-lg text-foreground md:hidden"
+      [attr.aria-label]="(isMenuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | transloco"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="mobile-navigation"
+      (click)="toggleMenu()"
+    >
+      <lucide-icon [img]="isMenuOpen() ? X : Menu" [size]="23" aria-hidden="true" />
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  @if (isMenuOpen()) {
+    <div
+      id="mobile-navigation"
+      class="absolute inset-x-0 top-full border-b border-border bg-surface p-4 shadow-lg md:hidden"
+    >
+      <div class="flex flex-col gap-3">
+        <a
+          routerLink="/"
+          (click)="closeMenu()"
+          class="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-background"
+        >
+          {{ 'nav.home' | transloco }}
+        </a>
+
+        <a
+          routerLink="/products"
+          (click)="closeMenu()"
+          class="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-background"
+        >
+          {{ 'nav.products' | transloco }}
+        </a>
+
+        <div class="my-1 border-t border-border"></div>
+
+        <div class="flex gap-2">
+          <button
+            type="button"
+            (click)="toggleLanguage()"
+            class="flex min-h-10 flex-1 items-center justify-center gap-2 rounded-lg border border-border text-foreground"
+          >
+            <lucide-icon [img]="Globe" [size]="17" aria-hidden="true" />
+            {{ 'nav.language' | transloco }}
+          </button>
+
+          <button
+            type="button"
+            (click)="toggleTheme()"
+            class="flex min-h-10 flex-1 items-center justify-center gap-2 rounded-lg border border-border text-foreground"
+          >
+            <lucide-icon [img]="Moon" [size]="17" aria-hidden="true" />
+            {{ 'nav.theme' | transloco }}
+          </button>
+        </div>
+
+        <a
+          routerLink="/login"
+          (click)="closeMenu()"
+          class="rounded-lg border border-border px-4 py-3 text-center text-sm font-semibold text-foreground"
+        >
+          {{ 'nav.login' | transloco }}
+        </a>
+
+        <a
+          routerLink="/register"
+          (click)="closeMenu()"
+          class="rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
+        >
+          {{ 'nav.getStarted' | transloco }}
+        </a>
+      </div>
+    </div>
+  }
+</header>

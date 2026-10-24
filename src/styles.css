@@ -44,6 +44,11 @@
 
   --warning: #d97706;
   --warning-soft: #fffbeb;
+
+  --navbar-height: 4rem;
+
+  --featured-card-bg: #1d1d1d;
+  --featured-card-fg: #ffffff;
 }
 
 :root.dark {
@@ -82,6 +87,10 @@
 
   --warning: #fbbf24;
   --warning-soft: #451a03;
+  --navbar-height: 4rem;
+
+  --featured-card-bg: #1d1d1d;
+  --featured-card-fg: #ffffff;
 }
 
 /* ---------------------------------------------------------------------------
@@ -123,6 +132,9 @@
 
   --color-warning: var(--warning);
   --color-warning-soft: var(--warning-soft);
+
+  --color-featured-card: var(--featured-card-bg);
+  --color-featured-card-foreground: var(--featured-card-fg);
 }
 
 @layer base {
@@ -137,5 +149,15 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
